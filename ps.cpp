@@ -19,8 +19,9 @@ int main(){
     //döngü, simülasyon tamamlanma süresine ulaşana kadar, süreçlerin tamamlanma süreleri kadar artarak devam eder.
     for(int i = 0; i <= SimulationCompletionTime; i = i + ProcessCompletionTime ){ 
         ProcessCompletionTime = rand() % 20 + 1; //süreç tamamlanma süresi, 1 ve 20 arasında rastgele seçilir.
-        cout << "Process completion time: " << ProcessCompletionTime << endl;
         cout << "Time " << i << "s: event happened." << endl;
+        cout << "Process completion time: " << ProcessCompletionTime << endl << endl;
+        
 
         if(i+ProcessCompletionTime>SimulationCompletionTime){
             if(SimulationCompletionTime - i <= ProcessCompletionTime){
