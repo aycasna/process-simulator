@@ -6,20 +6,20 @@ using namespace std;
 
 int main(){
 
-    int CompletionTime, processCount;
+    int SimulationCompletionTime, ProcessCompletionTime;
     srand (time(NULL));
-    CompletionTime = rand() % 200 + 1;
-    processCount = rand() % 10 + 2;
+    SimulationCompletionTime = rand() % 200 + 1;
 
-    cout << CompletionTime << endl;
-    cout << processCount << endl;
+    cout << "Simulation Completion Time: " << SimulationCompletionTime << endl;
+    
 
-    int count = 0;
-    for(int i=0; i<=CompletionTime; i++){
-        cout << "Zaman: " << i << " saniye: olay oldu" << endl;
-        count++;
-        if (count == processCount){
-            break;
-        }
+    
+    
+    for( int i=0; i<=SimulationCompletionTime; i = i+ProcessCompletionTime ){
+        ProcessCompletionTime = rand() % 20 + 1;
+        cout << "Process completion time: " <<ProcessCompletionTime << endl;
+        cout << "---------------------------Zaman: " << i << " saniye: olay oldu" << endl;
+        
+        
     }
 }
